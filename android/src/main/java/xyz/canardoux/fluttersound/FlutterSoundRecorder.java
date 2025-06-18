@@ -220,7 +220,7 @@ public class FlutterSoundRecorder extends FlutterSoundSession implements FlautoR
 			boolean 						toStream	    	= call.argument ( "toStream");
 			boolean							interleaved			= call.argument ( "interleaved");
 
-			boolean r = m_recorder.startRecorder(codec, sampleRate, numChannels, interleaved, bitRate, bufferSize, path, audioSource, toStream);
+			boolean r = m_recorder.startRecorder(codec, sampleRate, numChannels, interleaved, bitRate, bufferSize, path, audioSource, toStream,true,true);
 			if (r)
 				result.success ( "Media Recorder is started" );
 			else
